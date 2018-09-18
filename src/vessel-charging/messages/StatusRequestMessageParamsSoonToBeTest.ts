@@ -1,10 +1,11 @@
 import MessageParams from './StatusRequestMessageParams';
 
 describe('MessageParams class', () => {
-  const messageParams = new MessageParams({senderId: 'senderId'}); // <-- Causing TypeError
+  const messageParams = new MessageParams(); // <-- Causing TypeError
   const serializedMessageParams: any = {
     type: 'status_request_message',
-    senderId: 'senderId',
+    protocol: 'boat_charging',
+    ttl: undefined,
   };
 
   describe('serialize method', () => {
